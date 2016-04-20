@@ -1,4 +1,5 @@
 # all source files
+
 set(INCROOT ${PROJECT_SOURCE_DIR}/include/Network)
 set(SRCROOT ${PROJECT_SOURCE_DIR}/src/Network)
 
@@ -29,25 +30,25 @@ set(SRC_NETWORK
 # add platform specific sources
 if(SFML_OS_WINDOWS)
     list(APPEND SRC_NETWORK ${SRCROOT}/Win32/SocketImpl.cpp)
-	list(APPEND SRC_NETWORK ${INCROOT}/Win32/SocketImpl.hpp)
+    list(APPEND SRC_NETWORK ${SRCROOT}/Win32/SocketImpl.hpp)
 else()
     list(APPEND SRC_NETWORK ${SRCROOT}/Unix/SocketImpl.cpp)
-	list(APPEND SRC_NETWORK ${INCROOT}/Unix/SocketImpl.hpp)
+    list(APPEND SRC_NETWORK ${SRCROOT}/Unix/SocketImpl.hpp)
 endif()
 
 
 # add system libraries
+set(INCROOT ${PROJECT_SOURCE_DIR}/include/System)
+set(SRCROOT ${PROJECT_SOURCE_DIR}/src/System)
 
-set(INCROOT ${PROJECT_SOURCE_DIR}/include/SFML/System)
-set(SRCROOT ${PROJECT_SOURCE_DIR}/src/SFML/System)
 
-# all source files, TODO: delete unneeded concurrency files
-set(SRC
+# all source files, TODO:delete unneeded concurrency files
+set(SRC_SYSTEM
+    ${INCROOT}/Export.hpp
     ${SRCROOT}/Clock.cpp
     ${INCROOT}/Clock.hpp
     ${SRCROOT}/Err.cpp
     ${INCROOT}/Err.hpp
-    ${INCROOT}/Export.hpp
     ${INCROOT}/InputStream.hpp
     ${SRCROOT}/Lock.cpp
     ${INCROOT}/Lock.hpp
@@ -81,5 +82,5 @@ set(SRC
 )
 
 # define the sfml-network target
-sfml_add_library(sfml-network ${SRC_NETWORK})
+add_library(sfml-network ${SRC_NETWORK})
 add_library(sfml-system ${SRC_SYSTEM})
