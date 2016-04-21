@@ -1,0 +1,7 @@
+# Meme tier osx files
+.DS_Store
+
+# Generated stuff
+Makefile
+*.cmake
+*.filters
