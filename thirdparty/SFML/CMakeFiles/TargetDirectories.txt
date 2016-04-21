@@ -1,0 +1,4 @@
+/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/thirdparty/SFML/CMakeFiles/sfml-system.dir
+/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/thirdparty/SFML/CMakeFiles/edit_cache.dir
+/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/thirdparty/SFML/CMakeFiles/rebuild_cache.dir
+/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/thirdparty/SFML/CMakeFiles/sfml-network.dir

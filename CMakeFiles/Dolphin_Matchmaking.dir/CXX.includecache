@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/Dolphin-Matchmaking-Server.cpp
+stdafx.h
+/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/stdafx.h
+
+/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/stdafx.cpp
+stdafx.h
+/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/stdafx.h
+
+/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/stdafx.h
+targetver.h
+/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/targetver.h
+stdio.h
+-
+tchar.h
+-
+
+/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/targetver.h
+SDKDDKVer.h
+-
+

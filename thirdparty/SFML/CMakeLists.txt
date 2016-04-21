@@ -1,7 +1,7 @@
 # all source files
 
-set(INCROOT ${PROJECT_SOURCE_DIR}/include/Network)
-set(SRCROOT ${PROJECT_SOURCE_DIR}/src/Network)
+set(INCROOT ${LIBS_PATH}/include/Network)
+set(SRCROOT ${LIBS_PATH}/src/Network)
 
 set(SRC_NETWORK
     ${INCROOT}/Export.hpp
@@ -38,8 +38,8 @@ endif()
 
 
 # add system libraries
-set(INCROOT ${PROJECT_SOURCE_DIR}/include/System)
-set(SRCROOT ${PROJECT_SOURCE_DIR}/src/System)
+set(INCROOT ${LIBS_PATH}/include/System)
+set(SRCROOT ${LIBS_PATH}/src/System)
 
 
 # all source files, TODO:delete unneeded concurrency files
