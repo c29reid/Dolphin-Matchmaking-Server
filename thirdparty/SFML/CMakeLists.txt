@@ -1,86 +1,27 @@
-# all source files
-
-set(INCROOT ${PROJECT_SOURCE_DIR}/include/Network)
-set(SRCROOT ${PROJECT_SOURCE_DIR}/src/Network)
+include_directories(BEFORE include src)
 
 set(SRC_NETWORK
-    ${INCROOT}/Export.hpp
-    ${SRCROOT}/Ftp.cpp
-    ${INCROOT}/Ftp.hpp
-    ${SRCROOT}/Http.cpp
-    ${INCROOT}/Http.hpp
-    ${SRCROOT}/IpAddress.cpp
-    ${INCROOT}/IpAddress.hpp
-    ${SRCROOT}/Packet.cpp
-    ${INCROOT}/Packet.hpp
-    ${SRCROOT}/Socket.cpp
-    ${INCROOT}/Socket.hpp
-    ${SRCROOT}/SocketImpl.hpp
-    ${INCROOT}/SocketHandle.hpp
-    ${SRCROOT}/SocketSelector.cpp
-    ${INCROOT}/SocketSelector.hpp
-    ${SRCROOT}/TcpListener.cpp
-    ${INCROOT}/TcpListener.hpp
-    ${SRCROOT}/TcpSocket.cpp
-    ${INCROOT}/TcpSocket.hpp
-    ${SRCROOT}/UdpSocket.cpp
-    ${INCROOT}/UdpSocket.hpp
+	src/SFML/Network/Http.cpp
+	src/SFML/Network/IPAddress.cpp
+	src/SFML/Network/Packet.cpp
+	src/SFML/Network/Socket.cpp
+	src/SFML/Network/SocketSelector.cpp
+	src/SFML/Network/TcpListener.cpp
+	src/SFML/Network/TcpSocket.cpp
+	src/SFML/Network/UdpSocket.cpp
 )
 
-# add platform specific sources
-if(SFML_OS_WINDOWS)
-    list(APPEND SRC_NETWORK ${SRCROOT}/Win32/SocketImpl.cpp)
-    list(APPEND SRC_NETWORK ${SRCROOT}/Win32/SocketImpl.hpp)
+if(WIN32)
+	list(APPEND SRC_NETWORK src/SFML/Network/Win32/SocketImpl.cpp)
 else()
-    list(APPEND SRC_NETWORK ${SRCROOT}/Unix/SocketImpl.cpp)
-    list(APPEND SRC_NETWORK ${SRCROOT}/Unix/SocketImpl.hpp)
+	list(APPEND SRC_NETWORK src/SFML/Network/Unix/SocketImpl.cpp)
 endif()
 
-
-# add system libraries
-set(INCROOT ${PROJECT_SOURCE_DIR}/include/System)
-set(SRCROOT ${PROJECT_SOURCE_DIR}/src/System)
-
-
-# all source files, TODO:delete unneeded concurrency files
 set(SRC_SYSTEM
-    ${INCROOT}/Export.hpp
-    ${SRCROOT}/Clock.cpp
-    ${INCROOT}/Clock.hpp
-    ${SRCROOT}/Err.cpp
-    ${INCROOT}/Err.hpp
-    ${INCROOT}/InputStream.hpp
-    ${SRCROOT}/Lock.cpp
-    ${INCROOT}/Lock.hpp
-    ${SRCROOT}/Mutex.cpp
-    ${INCROOT}/Mutex.hpp
-    ${INCROOT}/NonCopyable.hpp
-    ${SRCROOT}/Sleep.cpp
-    ${INCROOT}/Sleep.hpp
-    ${SRCROOT}/String.cpp
-    ${INCROOT}/String.hpp
-    ${INCROOT}/String.inl
-    ${SRCROOT}/Thread.cpp
-    ${INCROOT}/Thread.hpp
-    ${INCROOT}/Thread.inl
-    ${SRCROOT}/ThreadLocal.cpp
-    ${INCROOT}/ThreadLocal.hpp
-    ${INCROOT}/ThreadLocalPtr.hpp
-    ${INCROOT}/ThreadLocalPtr.inl
-    ${SRCROOT}/Time.cpp
-    ${INCROOT}/Time.hpp
-    ${INCROOT}/Utf.hpp
-    ${INCROOT}/Utf.inl
-    ${INCROOT}/Vector2.hpp
-    ${INCROOT}/Vector2.inl
-    ${INCROOT}/Vector3.hpp
-    ${INCROOT}/Vector3.inl
-    ${SRCROOT}/FileInputStream.cpp
-    ${INCROOT}/FileInputStream.hpp
-    ${SRCROOT}/MemoryInputStream.cpp
-    ${INCROOT}/MemoryInputStream.hpp
+	src/SFML/System/Err.cpp
+	src/SFML/System/String.cpp
+	src/SFML/System/Time.cpp
 )
 
-# define the sfml-network target
 add_library(sfml-network ${SRC_NETWORK})
 add_library(sfml-system ${SRC_SYSTEM})
