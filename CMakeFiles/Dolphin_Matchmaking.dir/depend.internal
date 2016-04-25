@@ -3,9 +3,11 @@
 
 CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o
  /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/Dolphin-Matchmaking-Server.cpp
+ /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/PlayerInfo.h
+ /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/PlayerQueue.h
+ /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/Server.h
  /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/stdafx.h
- /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/targetver.h
 CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o
+ /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/Logger.h
  /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/stdafx.cpp
  /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/stdafx.h
- /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/targetver.h
