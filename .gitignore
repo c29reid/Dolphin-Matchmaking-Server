@@ -1,2 +1,9 @@
-# Ignore meme tier os files
+
+# Meme tier osx files
 .DS_Store
+
+# Generated stuff
+Makefile
+*.cmake
+*.filters
+>>>>>>> 69fe8a943ec3b140af3b70deba7844b59762da7d
