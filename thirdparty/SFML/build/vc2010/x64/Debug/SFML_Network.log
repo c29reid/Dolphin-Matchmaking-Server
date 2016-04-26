@@ -1,0 +1,14 @@
+﻿  Time.cpp
+  String.cpp
+  Err.cpp
+  SocketImpl.cpp
+  UdpSocket.cpp
+  TcpSocket.cpp
+  TcpListener.cpp
+  SocketSelector.cpp
+  Socket.cpp
+  Packet.cpp
+  IPAddress.cpp
+  Http.cpp
+  Generating Code...
+  SFML_Network.vcxproj -> C:\Users\Cristian\Desktop\Dolphin project\Dolphin-Matchmaking-Server\x64\Debug\SFML_Network.lib

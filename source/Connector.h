@@ -3,6 +3,8 @@
 
 #include "PlayerQueue.h"
 
+#include <SFML/Network/TcpSocket.hpp>
+#include <SFML/Network/TcpListener.hpp>
 
 class Connector
 {
@@ -11,6 +13,7 @@ public:
 
 	void run();
 	void stop();
+	PlayerInfo parsePacket(sf::Packet packet);
 
 private:
 	volatile bool m_running;

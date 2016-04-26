@@ -160,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Connector.h" />
+    <ClInclude Include="GeoLocation.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="PlayerQueue.h" />
     <ClInclude Include="Server.h" />
@@ -169,6 +170,7 @@
   <ItemGroup>
     <ClCompile Include="Connector.cpp" />
     <ClCompile Include="Dolphin-Matchmaking-Server.cpp" />
+    <ClCompile Include="GeoLocation.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="PlayerInfo.h">
       <FileType>CppHeader</FileType>
