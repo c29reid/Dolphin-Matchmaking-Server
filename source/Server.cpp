@@ -2,6 +2,7 @@
 
 #include "Server.h"
 #include "Connector.h"
+#include "Matchmaker.h"
 
 #include <thread>
 
@@ -20,8 +21,20 @@ void Server::start()
 
 	while (true)
 	{
+		Matchmaker matchmaker;
+		std::vector<PlayerInfo> players;
+		
+		
+		size_t len = queue.length(); // Cache the length to not block the connection thread
+		for (int i = 0; i < len - (len % 2); i++)
+		{
+			players.push_back(queue.pop());
+		}
 
-		// TODO
+		for (auto& player: players)
+		{
+			player.generateRankings(players);
+		}
 	}
 
 

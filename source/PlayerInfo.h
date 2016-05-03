@@ -2,22 +2,31 @@
 #include "stdafx.h"
 
 #include <string>
+#include <vector>
 
 class PlayerInfo
 {
 
 public: 
-	PlayerInfo(std::string playerCode, std::string gameHash);
+	PlayerInfo(std::wstring playerCode, std::wstring gameHash);
 
 
 public:
-	std::string getPlayerCode();
-	std::string getGameHash();
+	std::wstring getPlayerCode();
+	std::wstring getGameHash();
+
+	void generateRankings(std::vector<PlayerInfo> players);
+
+	bool operator==(const PlayerInfo &other) const;
+
+	int distance()
 
 private:
-	std::string m_playerCode;
+	std::wstring m_playerCode;
 	// TODO IPV4/IPV6 struct from SFML stuff
 	// GEO LOCATION DATA
-	std::string m_gameHash;
+	std::wstring m_gameHash;
 
+	std::vector< PlayerInfo > m_rankings;
+	PlayerInfo* m_match;
 };

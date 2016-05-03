@@ -1,10 +1,14 @@
 #include "stdafx.h"
 
+#include "PlayerInfo.h"
+
+#include <string>
 #include <iostream>
 
 #include "Connector.h"
 #include <SFML/Network/TcpSocket.hpp>
 #include <SFML/Network/TcpListener.hpp>
+
 
 Connector::Connector(PlayerQueue& queue) :
 	m_running(true),
@@ -22,8 +26,9 @@ void Connector::run()
 		sf::TcpSocket sock;
 		listener.accept(sock);
 		
-		std::cout << "Player Connected!" << std::endl;
-		PlayerInfo player("TODO", "TODO");
+		std::cout << "Player Connected!" << std::endl; // TODO: Make a logger or something for concurrent calls
+
+		PlayerInfo player(L"TODO", L"TODO");
 		m_queue.push(player);
 	}
 }
