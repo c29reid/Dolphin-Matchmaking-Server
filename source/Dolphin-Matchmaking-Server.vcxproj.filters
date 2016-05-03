@@ -36,7 +36,11 @@
     <ClInclude Include="Logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Matchmaker.h">
+=======
+    <ClInclude Include="GeoLocation.h">
+>>>>>>> b2e55f0ae7c9e46982d9c7037c117afeccf9b156
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -65,7 +69,11 @@
     <ClCompile Include="Logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Matchmaker.cpp">
+=======
+    <ClCompile Include="GeoLocation.cpp">
+>>>>>>> b2e55f0ae7c9e46982d9c7037c117afeccf9b156
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

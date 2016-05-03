@@ -4,20 +4,17 @@
 
 #include <algorithm>
 
-PlayerInfo::PlayerInfo(std::wstring playerCode, std::wstring gameHash) :
+PlayerInfo::PlayerInfo(std::string playerCode, std::string gameHash, GeoLocation playerPos, sf::IpAddress userIp) :
 	m_playerCode(playerCode),
 	m_gameHash(gameHash),
+	playerPos(playerPos),
+	userIp(userIp),
 	m_match(nullptr)
-	{}
+{}
 
-std::wstring PlayerInfo::getPlayerCode() 
+std::string PlayerInfo::getPlayerCode() 
 {
 	return m_playerCode;
-}
-
-std::wstring PlayerInfo::getGameHash()
-{
-	return m_gameHash;
 }
 
 void PlayerInfo::generateRankings(std::vector<PlayerInfo> players)
@@ -37,14 +34,33 @@ void PlayerInfo::generateRankings(std::vector<PlayerInfo> players)
 		}
 	}
 
-	std::sort(players.begin(), players.end(), [](PlayerInfo &player1, PlayerInfo &player2)
-	{
-		return distance(player1) < distance(player2);
-	}
+	// Create a preference array based on distances
+	std::sort(players.begin(), players.end(), [this](PlayerInfo &player1, PlayerInfo &player2)
+		{
+			return distance(player1) < distance(player2);
+		}
 	);
 }
 
 bool PlayerInfo::operator==(const PlayerInfo & other) const
 {
 	return other.m_playerCode == m_playerCode && m_gameHash == other.m_gameHash ;
+}
+
+int PlayerInfo::distance(PlayerInfo & other)
+{
+	return playerPos.distance(other.playerPos);
+}
+
+std::string PlayerInfo::getGameHash()
+{
+	return m_gameHash;
+}
+GeoLocation PlayerInfo::getGeoLocation() 
+{
+	return playerPos;
+}
+sf::IpAddress PlayerInfo::getIpAddress()
+{
+	return userIp;
 }

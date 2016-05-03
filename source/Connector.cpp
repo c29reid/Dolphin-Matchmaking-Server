@@ -6,6 +6,8 @@
 #include <iostream>
 
 #include "Connector.h"
+
+#include <SFML/Network/Packet.hpp>
 #include <SFML/Network/TcpSocket.hpp>
 #include <SFML/Network/TcpListener.hpp>
 
@@ -25,10 +27,12 @@ void Connector::run()
 	{
 		sf::TcpSocket sock;
 		listener.accept(sock);
-		
-		std::cout << "Player Connected!" << std::endl; // TODO: Make a logger or something for concurrent calls
 
-		PlayerInfo player(L"TODO", L"TODO");
+		std::cout << "Player Connected!" << std::endl;
+
+		GeoLocation todoLoc;
+		sf::IpAddress todoIp;
+		PlayerInfo player("TODO", "TODO", todoLoc, todoIp);
 		m_queue.push(player);
 	}
 }
@@ -37,4 +41,22 @@ void Connector::run()
 void Connector::stop()
 {
 	m_running = false;
+}
+
+PlayerInfo Connector::parsePacket(sf::Packet packet)
+{
+	std::string playerCode;
+	std::string gameHash;
+	
+	double latitude;
+	double longitude;
+	
+	std::string userIp;
+
+	packet >> playerCode >> gameHash >> latitude >> longitude >> userIp;
+
+	GeoLocation userLoc(latitude, longitude);
+
+	PlayerInfo tempPlayer(playerCode, gameHash, userLoc, sf::IpAddress(userIp));
+	return tempPlayer;
 }
