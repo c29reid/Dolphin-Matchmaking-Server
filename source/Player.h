@@ -14,17 +14,21 @@ public:
 
 	// Reject another player
 	void reject(Player& player);
+
+	// Decide on who's proposal to accept
 	void choose();
 
-	std::vector< PlayerInfo >& getRankings();
+	std::vector< Player >& getRankings();
 
 	void generateRankings(std::vector<Player> players);
 
 	double distance(Player& other);
 
+	bool operator==(const Player & other) const;
+
 private:
-	std::vector< PlayerInfo > m_rankings;
-	std::vector< PlayerInfo > m_requests;
+	std::vector< Player > m_rankings;
+	std::vector< Player > m_requests;
 
 	PlayerInfo m_playerInfo;
 };

@@ -24,6 +24,17 @@ std::vector<std::pair<PlayerInfo, PlayerInfo>> Matchmaker::match(std::vector<Pla
 		player.generateRankings(players);
 	}
 
+	// Make all players propose to their favourite match
+	for (auto &player : players)
+	{
+		player.propose(player.getRankings()[0]);
+	}
+
+	// Settle any multiple matches to the same player
+	for (auto &player : players)
+	{
+		player.choose();
+	}
 
 	auto isStable = [players]()
 	{
@@ -35,6 +46,7 @@ std::vector<std::pair<PlayerInfo, PlayerInfo>> Matchmaker::match(std::vector<Pla
 		return true;
 	};
 
+	// Phase 2, eliminate worse rotations
 	while (!isStable())
 	{
 
