@@ -10,3 +10,5 @@ Makefile
 *.pch
 .vs/*
 */x64/*
+CMakeCache.txt
+*.vc.db
