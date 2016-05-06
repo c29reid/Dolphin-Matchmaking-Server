@@ -18,18 +18,14 @@ public:
 	GeoLocation getGeoLocation();
 	sf::IpAddress getIpAddress();
 
-	void generateRankings(std::vector<PlayerInfo> players);
-
 	bool operator==(const PlayerInfo &other) const;
 
-	int distance(PlayerInfo& other);
+	double distance(PlayerInfo& other);
 
 private:
 	std::string m_playerCode;
 	std::string m_gameHash;
 	GeoLocation playerPos;
 	sf::IpAddress userIp;
-
-	std::vector< PlayerInfo > m_rankings;
-	PlayerInfo* m_match;
+	
 };

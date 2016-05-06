@@ -5,11 +5,14 @@
 #include "Matchmaker.h"
 
 #include <thread>
+#include <iostream>
 
 Server::Server() {}
 
 void Server::start()
 {
+
+	std::cout << "Starting Server" << std::endl;
 	PlayerQueue queue;
 	Connector connManager(queue);
 
@@ -18,17 +21,15 @@ void Server::start()
 	// Run free my thread
 	t.detach();
 
-
 	while (true)
 	{
 		Matchmaker matchmaker;
-		std::vector<PlayerInfo> players;
-		
+		std::vector<Player> players;
 		
 		size_t len = queue.length(); // Cache the length to not block the connection thread
-		for (int i = 0; i < len - (len % 2); i++)
+		for (size_t i = 0; i < len - (len % 2); i++)
 		{
-			players.push_back(queue.pop());
+			players.push_back(Player(queue.pop()));
 		}
 
 		for (auto& player: players)
