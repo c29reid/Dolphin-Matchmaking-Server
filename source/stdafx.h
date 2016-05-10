@@ -5,7 +5,10 @@
 
 #pragma once
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 #include <stdio.h>
 
 

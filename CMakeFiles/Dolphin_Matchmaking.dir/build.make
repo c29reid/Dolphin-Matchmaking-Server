@@ -57,76 +57,7 @@ include CMakeFiles/Dolphin_Matchmaking.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Dolphin_Matchmaking.dir/flags.make
 
-CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o: CMakeFiles/Dolphin_Matchmaking.dir/flags.make
-CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o: source/Dolphin-Matchmaking-Server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o -c /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/Dolphin-Matchmaking-Server.cpp
-
-CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/Dolphin-Matchmaking-Server.cpp > CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.i
-
-CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/Dolphin-Matchmaking-Server.cpp -o CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.s
-
-CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o.requires:
-
-.PHONY : CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o.requires
-
-CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o.provides: CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o.provides.build
-.PHONY : CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o.provides
-
-CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o.provides.build: CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o
-
-
-CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o: CMakeFiles/Dolphin_Matchmaking.dir/flags.make
-CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o: source/stdafx.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o -c /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/stdafx.cpp
-
-CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/stdafx.cpp > CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.i
-
-CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/source/stdafx.cpp -o CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.s
-
-CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o.requires:
-
-.PHONY : CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o.requires
-
-CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o.provides: CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o.provides.build
-.PHONY : CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o.provides
-
-CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o.provides.build: CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o
-
-
-# Object files for target Dolphin_Matchmaking
-Dolphin_Matchmaking_OBJECTS = \
-"CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o" \
-"CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o"
-
-# External object files for target Dolphin_Matchmaking
-Dolphin_Matchmaking_EXTERNAL_OBJECTS =
-
-Dolphin_Matchmaking: CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o
-Dolphin_Matchmaking: CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o
-Dolphin_Matchmaking: CMakeFiles/Dolphin_Matchmaking.dir/build.make
-Dolphin_Matchmaking: CMakeFiles/Dolphin_Matchmaking.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/macpeecee/Desktop/projects/Dolphin-Matchmaking-Server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Dolphin_Matchmaking"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Dolphin_Matchmaking.dir/link.txt --verbose=$(VERBOSE)
-
-# Rule to build all files generated by this target.
-CMakeFiles/Dolphin_Matchmaking.dir/build: Dolphin_Matchmaking
-
-.PHONY : CMakeFiles/Dolphin_Matchmaking.dir/build
-
-CMakeFiles/Dolphin_Matchmaking.dir/requires: CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o.requires
-CMakeFiles/Dolphin_Matchmaking.dir/requires: CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o.requires
+CMakeFiles/Dolphin_Matchmaking.dir/requires:
 
 .PHONY : CMakeFiles/Dolphin_Matchmaking.dir/requires
 
