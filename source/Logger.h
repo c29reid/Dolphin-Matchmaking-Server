@@ -12,6 +12,6 @@ public:
 	void logMessage (std::string log);
 
 private:
-	std::mutex mtd;
+	std::mutex mtx;
 
 };

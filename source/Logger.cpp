@@ -1,8 +1,9 @@
 #include "Logger.h"
 #include "stdafx.h"
 
-void logMessage(std::string theLog){
+void Logger::logMessage(std::string theLog){
 	mtx.lock();
+	std::cout << '-----------------------------' << std::endl;
 	std::cout << theLog << std::endl;
 	mtx.unlock();
 }
