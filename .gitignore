@@ -6,4 +6,9 @@
 Makefile
 *.cmake
 *.filters
->>>>>>> 69fe8a943ec3b140af3b70deba7844b59762da7d
+*.ipch
+*.pch
+.vs/*
+*/x64/*
+CMakeCache.txt
+*.vc.db

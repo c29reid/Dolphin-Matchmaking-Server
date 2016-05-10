@@ -18,7 +18,7 @@ void PlayerQueue::push(PlayerInfo playerInfo)
 	m_players.push(playerInfo);
 }
 
-int PlayerQueue::length()
+size_t PlayerQueue::length()
 {
 	std::lock_guard<std::mutex> lock(m_mutex);
 	return m_players.size();

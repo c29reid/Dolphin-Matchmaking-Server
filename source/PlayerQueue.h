@@ -20,7 +20,7 @@ public:
 	PlayerInfo pop();
 	void push(PlayerInfo playerInfo);
 
-	int length();
+	size_t length();
 
 private:
 	std::mutex m_mutex;

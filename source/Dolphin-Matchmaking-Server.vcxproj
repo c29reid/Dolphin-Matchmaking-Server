@@ -160,7 +160,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Connector.h" />
+    <ClInclude Include="GeoLocation.h" />
     <ClInclude Include="Logger.h" />
+    <ClInclude Include="Matchmaker.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerQueue.h" />
     <ClInclude Include="Server.h" />
     <ClInclude Include="stdafx.h" />
@@ -169,13 +172,16 @@
   <ItemGroup>
     <ClCompile Include="Connector.cpp" />
     <ClCompile Include="Dolphin-Matchmaking-Server.cpp" />
+    <ClCompile Include="GeoLocation.cpp" />
     <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerInfo.h">
       <FileType>CppHeader</FileType>
     </ClCompile>
     <ClCompile Include="PlayerInfo.cpp" />
     <ClCompile Include="PlayerQueue.cpp" />
     <ClCompile Include="Server.cpp" />
+    <ClCompile Include="Matchmaker.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -183,7 +189,17 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\gtest.1.7.0\build\native\gtest.targets" Condition="Exists('..\packages\gtest.1.7.0\build\native\gtest.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\gtest.1.7.0\build\native\gtest.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\gtest.1.7.0\build\native\gtest.targets'))" />
+  </Target>
 </Project>
