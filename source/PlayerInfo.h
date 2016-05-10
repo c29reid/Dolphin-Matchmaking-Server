@@ -11,13 +11,7 @@ class PlayerInfo
 {
 
 public: 
-<<<<<<< HEAD
-	PlayerInfo(std::string playerCode, std::string gameHash);
-	
-=======
 	PlayerInfo(std::string playerCode, std::string gameHash, GeoLocation playerPos, sf::IpAddress userIp);
-
->>>>>>> 50e28c7aaf3019c50dcfcdb6517ee10479316bdc
 	std::string getPlayerCode();
 	std::string getGameHash();
 	GeoLocation getGeoLocation();
