@@ -30,9 +30,17 @@ void Connector::run()
 
 		std::cout << "Player Connected!" << std::endl;
 
-		GeoLocation todoLoc;
-		sf::IpAddress todoIp;
-		PlayerInfo player("TODO", "TODO", todoLoc, todoIp);
+		sf::Packet packet;
+		sock.receive(packet);
+
+		std::cout << "Got Packet!" << std::endl;
+		PlayerInfo player = parsePacket(packet);
+
+		std::string playerName;
+		packet >> playerName;
+
+		std::cout << "Player: " << playerName << " connected" << std::endl;
+
 		m_queue.push(player);
 	}
 }

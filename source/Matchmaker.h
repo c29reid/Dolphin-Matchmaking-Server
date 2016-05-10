@@ -13,7 +13,7 @@ class Matchmaker
 public:
 	Matchmaker();
 
-	std::vector< std::pair<PlayerInfo, PlayerInfo> > match(std::vector<Player>& players);
+	std::vector< std::pair<PlayerInfo, PlayerInfo> > match(std::vector<Player> players);
 
 private:
 

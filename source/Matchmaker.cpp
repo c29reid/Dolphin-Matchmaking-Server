@@ -9,7 +9,7 @@ Matchmaker::Matchmaker()
 {
 }
 
-std::vector<std::pair<PlayerInfo, PlayerInfo>> Matchmaker::match(std::vector<Player>& players)
+std::vector<std::pair<PlayerInfo, PlayerInfo>> Matchmaker::match(std::vector<Player> players)
 {
 	std::vector<std::pair<PlayerInfo, PlayerInfo>> matches;
 
@@ -27,7 +27,8 @@ std::vector<std::pair<PlayerInfo, PlayerInfo>> Matchmaker::match(std::vector<Pla
 	// Make all players propose to their favourite match
 	for (auto &player : players)
 	{
-		player.propose(player.getRankings()[0]);
+		if (player.getRankings().size() > 0) 
+			player.propose(player.getRankings()[0]);
 	}
 
 	// Settle any multiple matches to the same player
@@ -40,7 +41,7 @@ std::vector<std::pair<PlayerInfo, PlayerInfo>> Matchmaker::match(std::vector<Pla
 	{
 		for (auto player : players)
 		{
-			if (player.getRankings().size() != 1)
+			if (player.getRankings().size() > 1)
 				return false;
 		}
 		return true;

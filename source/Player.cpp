@@ -33,7 +33,7 @@ void Player::reject(Player & player)
 
 void Player::choose()
 {
-	if (m_rankings.size() == 1)
+	if (m_rankings.size() <= 1)
 	{
 		return;
 	}

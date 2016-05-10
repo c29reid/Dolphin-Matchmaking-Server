@@ -6,6 +6,7 @@
 
 #include <thread>
 #include <iostream>
+#include <thread>
 
 Server::Server() {}
 
@@ -23,6 +24,9 @@ void Server::start()
 
 	while (true)
 	{
+		// TODO: When we get multiple search queues going, iterate through them and record 
+		// the last time matchmaking has been done for that queue instead of a naive 30s sleep
+		std::this_thread::sleep_for(std::chrono::milliseconds(30000)); // Let the connections build up before we search for good matches
 		Matchmaker matchmaker;
 		std::vector<Player> players;
 		
@@ -36,6 +40,10 @@ void Server::start()
 		{
 			player.generateRankings(players);
 		}
+
+		matchmaker.match(players);
+
+		std::cout << "Done matching" << std::endl;
 	}
 
 
