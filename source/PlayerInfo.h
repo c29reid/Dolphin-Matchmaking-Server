@@ -8,9 +8,7 @@ class PlayerInfo
 
 public: 
 	PlayerInfo(std::string playerCode, std::string gameHash);
-
-
-public:
+	
 	std::string getPlayerCode();
 	std::string getGameHash();
 
