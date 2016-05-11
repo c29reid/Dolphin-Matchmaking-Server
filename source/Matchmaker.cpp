@@ -9,9 +9,9 @@ Matchmaker::Matchmaker()
 {
 }
 
-std::vector<std::pair<PlayerInfo, PlayerInfo>> Matchmaker::match(std::vector<Player> players)
+std::vector<std::pair<PlayerInfo, PlayerInfo> > Matchmaker::match(std::vector<Player> players)
 {
-	std::vector<std::pair<PlayerInfo, PlayerInfo>> matches;
+	std::vector<std::pair<PlayerInfo, PlayerInfo> > matches;
 
 	// Create a ranking between players based on a similar problem to stable marriage
 	// https://en.wikipedia.org/wiki/Stable_roommates_problem

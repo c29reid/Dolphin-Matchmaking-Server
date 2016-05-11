@@ -123,6 +123,33 @@ Dolphin_Matchmaking/fast:
 	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/build
 .PHONY : Dolphin_Matchmaking/fast
 
+source/Connector.o: source/Connector.cpp.o
+
+.PHONY : source/Connector.o
+
+# target to build an object file
+source/Connector.cpp.o:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Connector.cpp.o
+.PHONY : source/Connector.cpp.o
+
+source/Connector.i: source/Connector.cpp.i
+
+.PHONY : source/Connector.i
+
+# target to preprocess a source file
+source/Connector.cpp.i:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Connector.cpp.i
+.PHONY : source/Connector.cpp.i
+
+source/Connector.s: source/Connector.cpp.s
+
+.PHONY : source/Connector.s
+
+# target to generate assembly for a file
+source/Connector.cpp.s:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Connector.cpp.s
+.PHONY : source/Connector.cpp.s
+
 source/Dolphin-Matchmaking-Server.o: source/Dolphin-Matchmaking-Server.cpp.o
 
 .PHONY : source/Dolphin-Matchmaking-Server.o
@@ -149,6 +176,195 @@ source/Dolphin-Matchmaking-Server.s: source/Dolphin-Matchmaking-Server.cpp.s
 source/Dolphin-Matchmaking-Server.cpp.s:
 	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.s
 .PHONY : source/Dolphin-Matchmaking-Server.cpp.s
+
+source/GeoLocation.o: source/GeoLocation.cpp.o
+
+.PHONY : source/GeoLocation.o
+
+# target to build an object file
+source/GeoLocation.cpp.o:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/GeoLocation.cpp.o
+.PHONY : source/GeoLocation.cpp.o
+
+source/GeoLocation.i: source/GeoLocation.cpp.i
+
+.PHONY : source/GeoLocation.i
+
+# target to preprocess a source file
+source/GeoLocation.cpp.i:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/GeoLocation.cpp.i
+.PHONY : source/GeoLocation.cpp.i
+
+source/GeoLocation.s: source/GeoLocation.cpp.s
+
+.PHONY : source/GeoLocation.s
+
+# target to generate assembly for a file
+source/GeoLocation.cpp.s:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/GeoLocation.cpp.s
+.PHONY : source/GeoLocation.cpp.s
+
+source/Logger.o: source/Logger.cpp.o
+
+.PHONY : source/Logger.o
+
+# target to build an object file
+source/Logger.cpp.o:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Logger.cpp.o
+.PHONY : source/Logger.cpp.o
+
+source/Logger.i: source/Logger.cpp.i
+
+.PHONY : source/Logger.i
+
+# target to preprocess a source file
+source/Logger.cpp.i:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Logger.cpp.i
+.PHONY : source/Logger.cpp.i
+
+source/Logger.s: source/Logger.cpp.s
+
+.PHONY : source/Logger.s
+
+# target to generate assembly for a file
+source/Logger.cpp.s:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Logger.cpp.s
+.PHONY : source/Logger.cpp.s
+
+source/Matchmaker.o: source/Matchmaker.cpp.o
+
+.PHONY : source/Matchmaker.o
+
+# target to build an object file
+source/Matchmaker.cpp.o:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Matchmaker.cpp.o
+.PHONY : source/Matchmaker.cpp.o
+
+source/Matchmaker.i: source/Matchmaker.cpp.i
+
+.PHONY : source/Matchmaker.i
+
+# target to preprocess a source file
+source/Matchmaker.cpp.i:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Matchmaker.cpp.i
+.PHONY : source/Matchmaker.cpp.i
+
+source/Matchmaker.s: source/Matchmaker.cpp.s
+
+.PHONY : source/Matchmaker.s
+
+# target to generate assembly for a file
+source/Matchmaker.cpp.s:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Matchmaker.cpp.s
+.PHONY : source/Matchmaker.cpp.s
+
+source/Player.o: source/Player.cpp.o
+
+.PHONY : source/Player.o
+
+# target to build an object file
+source/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Player.cpp.o
+.PHONY : source/Player.cpp.o
+
+source/Player.i: source/Player.cpp.i
+
+.PHONY : source/Player.i
+
+# target to preprocess a source file
+source/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Player.cpp.i
+.PHONY : source/Player.cpp.i
+
+source/Player.s: source/Player.cpp.s
+
+.PHONY : source/Player.s
+
+# target to generate assembly for a file
+source/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Player.cpp.s
+.PHONY : source/Player.cpp.s
+
+source/PlayerInfo.o: source/PlayerInfo.cpp.o
+
+.PHONY : source/PlayerInfo.o
+
+# target to build an object file
+source/PlayerInfo.cpp.o:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/PlayerInfo.cpp.o
+.PHONY : source/PlayerInfo.cpp.o
+
+source/PlayerInfo.i: source/PlayerInfo.cpp.i
+
+.PHONY : source/PlayerInfo.i
+
+# target to preprocess a source file
+source/PlayerInfo.cpp.i:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/PlayerInfo.cpp.i
+.PHONY : source/PlayerInfo.cpp.i
+
+source/PlayerInfo.s: source/PlayerInfo.cpp.s
+
+.PHONY : source/PlayerInfo.s
+
+# target to generate assembly for a file
+source/PlayerInfo.cpp.s:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/PlayerInfo.cpp.s
+.PHONY : source/PlayerInfo.cpp.s
+
+source/PlayerQueue.o: source/PlayerQueue.cpp.o
+
+.PHONY : source/PlayerQueue.o
+
+# target to build an object file
+source/PlayerQueue.cpp.o:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/PlayerQueue.cpp.o
+.PHONY : source/PlayerQueue.cpp.o
+
+source/PlayerQueue.i: source/PlayerQueue.cpp.i
+
+.PHONY : source/PlayerQueue.i
+
+# target to preprocess a source file
+source/PlayerQueue.cpp.i:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/PlayerQueue.cpp.i
+.PHONY : source/PlayerQueue.cpp.i
+
+source/PlayerQueue.s: source/PlayerQueue.cpp.s
+
+.PHONY : source/PlayerQueue.s
+
+# target to generate assembly for a file
+source/PlayerQueue.cpp.s:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/PlayerQueue.cpp.s
+.PHONY : source/PlayerQueue.cpp.s
+
+source/Server.o: source/Server.cpp.o
+
+.PHONY : source/Server.o
+
+# target to build an object file
+source/Server.cpp.o:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Server.cpp.o
+.PHONY : source/Server.cpp.o
+
+source/Server.i: source/Server.cpp.i
+
+.PHONY : source/Server.i
+
+# target to preprocess a source file
+source/Server.cpp.i:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Server.cpp.i
+.PHONY : source/Server.cpp.i
+
+source/Server.s: source/Server.cpp.s
+
+.PHONY : source/Server.s
+
+# target to generate assembly for a file
+source/Server.cpp.s:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Server.cpp.s
+.PHONY : source/Server.cpp.s
 
 source/stdafx.o: source/stdafx.cpp.o
 
@@ -186,9 +402,33 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Dolphin_Matchmaking"
+	@echo "... source/Connector.o"
+	@echo "... source/Connector.i"
+	@echo "... source/Connector.s"
 	@echo "... source/Dolphin-Matchmaking-Server.o"
 	@echo "... source/Dolphin-Matchmaking-Server.i"
 	@echo "... source/Dolphin-Matchmaking-Server.s"
+	@echo "... source/GeoLocation.o"
+	@echo "... source/GeoLocation.i"
+	@echo "... source/GeoLocation.s"
+	@echo "... source/Logger.o"
+	@echo "... source/Logger.i"
+	@echo "... source/Logger.s"
+	@echo "... source/Matchmaker.o"
+	@echo "... source/Matchmaker.i"
+	@echo "... source/Matchmaker.s"
+	@echo "... source/Player.o"
+	@echo "... source/Player.i"
+	@echo "... source/Player.s"
+	@echo "... source/PlayerInfo.o"
+	@echo "... source/PlayerInfo.i"
+	@echo "... source/PlayerInfo.s"
+	@echo "... source/PlayerQueue.o"
+	@echo "... source/PlayerQueue.i"
+	@echo "... source/PlayerQueue.s"
+	@echo "... source/Server.o"
+	@echo "... source/Server.i"
+	@echo "... source/Server.s"
 	@echo "... source/stdafx.o"
 	@echo "... source/stdafx.i"
 	@echo "... source/stdafx.s"

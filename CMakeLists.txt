@@ -7,7 +7,23 @@ project (Dolphin_Matchmaking)
 set(SRCROOT ${PROJECT_SOURCE_DIR}/source)
 
 set(SRC_DOLPHIN
+	${SRCROOT}/Connector.cpp
+	${SRCROOT}/Connector.h
 	${SRCROOT}/Dolphin-Matchmaking-Server.cpp
+	${SRCROOT}/GeoLocation.cpp
+	${SRCROOT}/GeoLocation.h
+	${SRCROOT}/Logger.cpp
+	${SRCROOT}/Logger.h
+	${SRCROOT}/Matchmaker.cpp
+	${SRCROOT}/Matchmaker.h
+	${SRCROOT}/Player.cpp
+	${SRCROOT}/Player.h
+	${SRCROOT}/PlayerInfo.cpp
+	${SRCROOT}/PlayerInfo.h
+	${SRCROOT}/PlayerQueue.cpp
+	${SRCROOT}/PlayerQueue.h
+	${SRCROOT}/Server.cpp
+	${SRCROOT}/Server.h
 	${SRCROOT}/stdafx.cpp
 	${SRCROOT}/stdafx.h
 )
