@@ -9,9 +9,9 @@ class Logger
 
 public:
 
-	void logMessage (std::string log);
+	static void logMessage (std::string log);
 
 private:
-	std::mutex mtx;
+	static std::mutex mtx;
 
 };
