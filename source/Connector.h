@@ -13,7 +13,7 @@ public:
 
 	void run();
 	void stop();
-	PlayerInfo parsePacket(sf::Packet packet);
+	PlayerInfo parsePacket(sf::Packet& packet);
 
 private:
 	volatile bool m_running;
