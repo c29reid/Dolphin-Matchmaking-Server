@@ -1,7 +1,9 @@
 # version and project naming
+
 cmake_minimum_required (VERSION 2.6)
 project (Dolphin_Matchmaking)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 
 # get main project
 set(SRCROOT ${PROJECT_SOURCE_DIR}/source)
