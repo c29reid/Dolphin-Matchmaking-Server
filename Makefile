@@ -123,6 +123,60 @@ Dolphin_Matchmaking/fast:
 	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/build
 .PHONY : Dolphin_Matchmaking/fast
 
+source/Dolphin-Matchmaking-Server.o: source/Dolphin-Matchmaking-Server.cpp.o
+
+.PHONY : source/Dolphin-Matchmaking-Server.o
+
+# target to build an object file
+source/Dolphin-Matchmaking-Server.cpp.o:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.o
+.PHONY : source/Dolphin-Matchmaking-Server.cpp.o
+
+source/Dolphin-Matchmaking-Server.i: source/Dolphin-Matchmaking-Server.cpp.i
+
+.PHONY : source/Dolphin-Matchmaking-Server.i
+
+# target to preprocess a source file
+source/Dolphin-Matchmaking-Server.cpp.i:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.i
+.PHONY : source/Dolphin-Matchmaking-Server.cpp.i
+
+source/Dolphin-Matchmaking-Server.s: source/Dolphin-Matchmaking-Server.cpp.s
+
+.PHONY : source/Dolphin-Matchmaking-Server.s
+
+# target to generate assembly for a file
+source/Dolphin-Matchmaking-Server.cpp.s:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/Dolphin-Matchmaking-Server.cpp.s
+.PHONY : source/Dolphin-Matchmaking-Server.cpp.s
+
+source/stdafx.o: source/stdafx.cpp.o
+
+.PHONY : source/stdafx.o
+
+# target to build an object file
+source/stdafx.cpp.o:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.o
+.PHONY : source/stdafx.cpp.o
+
+source/stdafx.i: source/stdafx.cpp.i
+
+.PHONY : source/stdafx.i
+
+# target to preprocess a source file
+source/stdafx.cpp.i:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.i
+.PHONY : source/stdafx.cpp.i
+
+source/stdafx.s: source/stdafx.cpp.s
+
+.PHONY : source/stdafx.s
+
+# target to generate assembly for a file
+source/stdafx.cpp.s:
+	$(MAKE) -f CMakeFiles/Dolphin_Matchmaking.dir/build.make CMakeFiles/Dolphin_Matchmaking.dir/source/stdafx.cpp.s
+.PHONY : source/stdafx.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -132,6 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Dolphin_Matchmaking"
+	@echo "... source/Dolphin-Matchmaking-Server.o"
+	@echo "... source/Dolphin-Matchmaking-Server.i"
+	@echo "... source/Dolphin-Matchmaking-Server.s"
+	@echo "... source/stdafx.o"
+	@echo "... source/stdafx.i"
+	@echo "... source/stdafx.s"
 .PHONY : help
 
 
