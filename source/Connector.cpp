@@ -51,13 +51,13 @@ void Connector::stop()
 	m_running = false;
 }
 
-PlayerInfo Connector::parsePacket(sf::Packet packet)
+PlayerInfo Connector::parsePacket(sf::Packet &packet)
 {
 	std::string playerCode;
 	std::string gameHash;
 	
-	double latitude;
-	double longitude;
+	int latitude;
+	int longitude;
 	
 	std::string userIp;
 
