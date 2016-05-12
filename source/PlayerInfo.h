@@ -5,7 +5,7 @@
 #include <vector>
 
 #include "GeoLocation.h"
-#include <SFML/Network/IpAddress.hpp>
+#include <SFML/Network/IPAddress.hpp>
 
 class PlayerInfo
 {

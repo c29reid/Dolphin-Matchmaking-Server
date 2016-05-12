@@ -3,7 +3,7 @@
 cmake_minimum_required (VERSION 2.6)
 project (Dolphin_Matchmaking)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -pthread")
 
 # get main project
 set(SRCROOT ${PROJECT_SOURCE_DIR}/source)
@@ -33,9 +33,15 @@ set(SRC_DOLPHIN
 add_executable(Dolphin_Matchmaking ${SRC_DOLPHIN})
 
 
+message("Seting up SFML")
+add_definitions(-DSFML_STATIC)
 # get extra libraries
 set(LIBS_PATH ${PROJECT_SOURCE_DIR}/thirdparty/SFML/build/)
 
-include_directories ("${LIBS_PATH}/SFML/include")
+add_subdirectory(thirdparty/SFML)
+
+include_directories (BEFORE thirdparty/SFML/include)
+
+
 
 target_link_libraries(Dolphin_Matchmaking sfml-network sfml-system)
