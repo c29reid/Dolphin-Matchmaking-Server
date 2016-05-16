@@ -19,16 +19,17 @@ Logger* Logger::Instance()
 bool Logger::openLogFile(std::string logfile)
 {
 	// ... stuff ...
+	return false;
 }
 
 std::string Logger::getTimeStamp()
 {
 	time_t ltime;
-    struct tm *Tm;
+    struct tm Tm;
  
     ltime=time(NULL);
-    Tm=localtime(&ltime);
-    return "["+ std::to_string(Tm->tm_hour) +":"+ std::to_string(Tm->tm_min) +":"+ std::to_string(Tm->tm_sec) +"]";	
+    localtime_s(&Tm, &ltime);
+    return "["+ std::to_string(Tm.tm_hour) +":"+ std::to_string(Tm.tm_min) +":"+ std::to_string(Tm.tm_sec) +"]";	
 }
 
 void Logger::logMessage(std::string theLog)
