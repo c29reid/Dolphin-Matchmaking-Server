@@ -2,7 +2,6 @@
 #include "stdafx.h"
 
 #include "PlayerQueue.h"
-#include "Logger.h"
 
 #include <SFML/Network/TcpSocket.hpp>
 #include <SFML/Network/TcpListener.hpp>

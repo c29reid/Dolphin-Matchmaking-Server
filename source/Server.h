@@ -3,7 +3,6 @@
 #include "stdafx.h"
 
 #include "PlayerQueue.h"
-#include "Logger.h"
 
 class Server
 {

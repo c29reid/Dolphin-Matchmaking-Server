@@ -3,6 +3,7 @@
 #include "Server.h"
 #include "Connector.h"
 #include "Matchmaker.h"
+#include "Logger.h"
 
 #include <thread>
 #include <iostream>

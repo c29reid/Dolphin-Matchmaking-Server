@@ -21,10 +21,7 @@ private:
 	static std::string getTimeStamp();
 
 	static std::mutex mtx;
-
-	Logger(){};
-	Logger(Logger const&){};
-	Logger& operator=(Logger const&){};
+	
 	static Logger* m_pInstance;
 
 };

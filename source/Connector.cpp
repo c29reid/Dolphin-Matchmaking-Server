@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "Connector.h"
+#include "Logger.h"
 
 #include <SFML/Network/Packet.hpp>
 #include <SFML/Network/TcpSocket.hpp>
