@@ -17,6 +17,4 @@ private:
 
 	PlayerQueue m_queue;
 
-	Logger *logger = Logger::Instance();
-
 };

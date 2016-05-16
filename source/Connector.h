@@ -17,7 +17,6 @@ public:
 	PlayerInfo parsePacket(sf::Packet& packet);
 
 private:
-	Logger *logger = Logger::Instance();
 
 	volatile bool m_running;
 	PlayerQueue& m_queue;

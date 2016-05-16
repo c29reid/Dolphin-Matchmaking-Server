@@ -12,7 +12,7 @@ Server::Server() {}
 
 void Server::start()
 {
-	logger->logMessage("Starting Server");
+	Logger::logMessage("Starting Server");
 
 	PlayerQueue queue;
 	Connector connManager(queue);
@@ -43,7 +43,7 @@ void Server::start()
 
 		matchmaker.match(players);
 
-		logger->logMessage("Done matching");
+		Logger::logMessage("Done matching");
 	}
 
 }

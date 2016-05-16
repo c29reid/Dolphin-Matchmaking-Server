@@ -18,6 +18,3 @@ CMakeCache.txt
 
 # executable
 Dolphin_Matchmaking
-
-# libs (gets rid of cmake stuff in libs)
-thirdparty/*
