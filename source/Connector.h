@@ -2,6 +2,7 @@
 #include "stdafx.h"
 
 #include "PlayerQueue.h"
+#include "Logger.h"
 
 #include <SFML/Network/TcpSocket.hpp>
 #include <SFML/Network/TcpListener.hpp>
@@ -16,8 +17,9 @@ public:
 	PlayerInfo parsePacket(sf::Packet& packet);
 
 private:
+	Logger *logger = Logger::Instance();
+
 	volatile bool m_running;
 	PlayerQueue& m_queue;
-
 
 };

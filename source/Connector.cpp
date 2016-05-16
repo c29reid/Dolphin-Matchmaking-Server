@@ -28,18 +28,18 @@ void Connector::run()
 		sf::TcpSocket sock;
 		listener.accept(sock);
 
-		std::cout << "Player Connected!" << std::endl;
+		logger->logMessage("Player Connected!");
 
 		sf::Packet packet;
 		sock.receive(packet);
 
-		std::cout << "Got Packet!" << std::endl;
+		logger->logMessage("Got Packet!");
 		PlayerInfo player = parsePacket(packet);
 
 		std::string playerName;
 		packet >> playerName;
 
-		std::cout << "Player: " << playerName << " connected" << std::endl;
+		logger->logMessage("Player: " + playerName + " connected");
 
 		m_queue.push(player);
 	}

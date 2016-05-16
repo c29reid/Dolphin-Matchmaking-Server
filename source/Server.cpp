@@ -12,8 +12,8 @@ Server::Server() {}
 
 void Server::start()
 {
+	logger->logMessage("Starting Server");
 
-	std::cout << "Starting Server" << std::endl;
 	PlayerQueue queue;
 	Connector connManager(queue);
 
@@ -26,7 +26,7 @@ void Server::start()
 	{
 		// TODO: When we get multiple search queues going, iterate through them and record 
 		// the last time matchmaking has been done for that queue instead of a naive 30s sleep
-		std::this_thread::sleep_for(std::chrono::milliseconds(30000)); // Let the connections build up before we search for good matches
+		std::this_thread::sleep_for(std::chrono::milliseconds(1000));//30000)); // Let the connections build up before we search for good matches
 		Matchmaker matchmaker;
 		std::vector<Player> players;
 		
@@ -43,8 +43,7 @@ void Server::start()
 
 		matchmaker.match(players);
 
-		std::cout << "Done matching" << std::endl;
+		logger->logMessage("Done matching");
 	}
-
 
 }

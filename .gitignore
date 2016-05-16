@@ -12,4 +12,12 @@ Makefile
 */x64/*
 CMakeCache.txt
 *.vc.db
-CMakeFiles/*
+
+**/CMakeFiles/**
+*/CMakeFiles/*
+
+# executable
+Dolphin_Matchmaking
+
+# libs (gets rid of cmake stuff in libs)
+thirdparty/*

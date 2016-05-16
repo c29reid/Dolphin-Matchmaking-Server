@@ -3,6 +3,7 @@
 #include "stdafx.h"
 
 #include "PlayerQueue.h"
+#include "Logger.h"
 
 class Server
 {
@@ -15,5 +16,7 @@ public:
 private:
 
 	PlayerQueue m_queue;
+
+	Logger *logger = Logger::Instance();
 
 };
