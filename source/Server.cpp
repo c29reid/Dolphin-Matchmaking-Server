@@ -4,6 +4,7 @@
 #include "Connector.h"
 #include "Matchmaker.h"
 #include "Logger.h"
+#include "Config.h"
 
 #include <thread>
 #include <iostream>
@@ -13,6 +14,9 @@ Server::Server() {}
 
 void Server::start()
 {
+
+	Config::readConfigFile();
+
 	Logger::logMessage("Starting Server");
 
 	PlayerQueue queue;
@@ -25,9 +29,11 @@ void Server::start()
 
 	while (true)
 	{
+		int waitTime = Config::getConfigValue("matchSleep");
+
 		// TODO: When we get multiple search queues going, iterate through them and record 
 		// the last time matchmaking has been done for that queue instead of a naive 30s sleep
-		std::this_thread::sleep_for(std::chrono::milliseconds(1000));//30000)); // Let the connections build up before we search for good matches
+		std::this_thread::sleep_for(std::chrono::milliseconds(waitTime)); // Let the connections build up before we search for good matches
 		Matchmaker matchmaker;
 		std::vector<Player> players;
 		
