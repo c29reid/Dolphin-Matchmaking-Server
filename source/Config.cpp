@@ -7,14 +7,12 @@
 #include <iostream>
 #include <fstream>
 
-std::mutex Config::mtx;
 Config* Config::m_pInstance = NULL; 
-std::map<std::string, int> Config::configMap;
 
 Config* Config::Instance()
 {
-   	if (!m_pInstance)
-    	m_pInstance = new Config;
+  if (!m_pInstance)
+   	m_pInstance = new Config;
 	return m_pInstance;
 }
 
@@ -28,8 +26,6 @@ void Config::printConfig()
 
 void Config::readConfigFile()
 {
-	mtx.lock();
-
 	std::ifstream infile("settings/config.conf");
 
 	if(!infile)
@@ -49,8 +45,6 @@ void Config::readConfigFile()
 
 		infile.close();
 	}
-
-	mtx.unlock();
 }
 
 int Config::getConfigValue(std::string key)

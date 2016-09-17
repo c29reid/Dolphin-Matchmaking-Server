@@ -3,12 +3,14 @@
 cmake_minimum_required (VERSION 2.6)
 project (Dolphin_Matchmaking)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -pthread")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -stdlib=libc++ -pthread")
 
 # get main project
 set(SRCROOT ${PROJECT_SOURCE_DIR}/source)
 
 set(SRC_DOLPHIN
+	${SRCROOT}/Config.h
+	${SRCROOT}/Config.cpp
 	${SRCROOT}/Connector.cpp
 	${SRCROOT}/Connector.h
 	${SRCROOT}/Dolphin-Matchmaking-Server.cpp
@@ -18,6 +20,7 @@ set(SRC_DOLPHIN
 	${SRCROOT}/Logger.h
 	${SRCROOT}/Matchmaker.cpp
 	${SRCROOT}/Matchmaker.h
+	${SRCROOT}/PreferenceList.h
 	${SRCROOT}/Player.cpp
 	${SRCROOT}/Player.h
 	${SRCROOT}/PlayerInfo.cpp

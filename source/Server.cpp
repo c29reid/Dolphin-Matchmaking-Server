@@ -9,13 +9,12 @@
 #include <thread>
 #include <iostream>
 #include <thread>
+#include <string>
 
 Server::Server() {}
 
 void Server::start()
 {
-
-	Config::readConfigFile();
 
 	Logger::logMessage("Starting Server");
 
@@ -24,12 +23,12 @@ void Server::start()
 
 	std::thread t(&Connector::run, connManager);
 
-	// Run free my thread
+	// Run free my thread (HAHAHHA)
 	t.detach();
 
 	while (true)
 	{
-		int waitTime = Config::getConfigValue("matchSleep");
+		int waitTime = Config::Instance()->getConfigValue("matchSleep");
 
 		// TODO: When we get multiple search queues going, iterate through them and record 
 		// the last time matchmaking has been done for that queue instead of a naive 30s sleep

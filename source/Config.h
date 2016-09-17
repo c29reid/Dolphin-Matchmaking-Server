@@ -18,17 +18,18 @@ public:
 		}
 	}
 
-	static void printConfig();
-	static void readConfigFile();
-	static int getConfigValue(std::string key);
-	static void setConfigValue(std::string key, int newVal);
-	static bool closeConfigFile(); // TODO
+	void printConfig();
+	void readConfigFile();
+	int getConfigValue(std::string key);
+	void setConfigValue(std::string key, int newVal);
 
 private:
-	Config() {}
+	Config() {
+		readConfigFile();
+	}
 	static Config* m_pInstance;
-	static std::mutex mtx;
+	std::mutex mtx;
 
-	static std::map<std::string, int> configMap;
+	std::map<std::string, int> configMap;
 
 };
