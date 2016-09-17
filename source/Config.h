@@ -22,7 +22,6 @@ public:
 	static void readConfigFile();
 	static int getConfigValue(std::string key);
 	static void setConfigValue(std::string key, int newVal);
-	static bool closeConfigFile(); // TODO
 
 private:
 	Config() {}

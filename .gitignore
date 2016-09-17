@@ -9,12 +9,15 @@ Makefile
 *.ipch
 *.pch
 .vs/*
-*/x64/*
+*x64*
 CMakeCache.txt
 *.vc.db
+*.VC.opendb
 
 **/CMakeFiles/**
 */CMakeFiles/*
+
+thirdparty/*
 
 # executable
 Dolphin_Matchmaking

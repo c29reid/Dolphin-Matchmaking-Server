@@ -159,10 +159,12 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Config.h" />
     <ClInclude Include="Connector.h" />
     <ClInclude Include="GeoLocation.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="Matchmaker.h" />
+    <ClInclude Include="MatchmakerPreferenceMap.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerQueue.h" />
     <ClInclude Include="Server.h" />
@@ -170,6 +172,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Config.cpp" />
     <ClCompile Include="Connector.cpp" />
     <ClCompile Include="Dolphin-Matchmaking-Server.cpp" />
     <ClCompile Include="GeoLocation.cpp" />
@@ -189,7 +192,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

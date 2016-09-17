@@ -30,6 +30,7 @@ void Server::start()
 	while (true)
 	{
 		int waitTime = Config::getConfigValue("matchSleep");
+		
 
 		// TODO: When we get multiple search queues going, iterate through them and record 
 		// the last time matchmaking has been done for that queue instead of a naive 30s sleep
