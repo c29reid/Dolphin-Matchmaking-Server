@@ -17,7 +17,7 @@ CMakeCache.txt
 **/CMakeFiles/**
 */CMakeFiles/*
 
-thirdparty/*
+build/*
 
 # executable
 Dolphin_Matchmaking

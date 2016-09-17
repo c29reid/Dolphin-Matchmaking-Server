@@ -1,5 +1,6 @@
 #pragma once
 #include "stdafx.h"
+#include "PreferenceList.h"
 
 #include <string>
 #include <vector>
@@ -21,6 +22,8 @@ public:
 	bool operator==(const PlayerInfo &other) const;
 
 	double distance(PlayerInfo& other);
+
+	PreferenceList playerPrefsList;
 
 private:
 	std::string m_playerCode;
