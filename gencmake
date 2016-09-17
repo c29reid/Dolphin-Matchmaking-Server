@@ -14,7 +14,7 @@ set(SRCROOT ${PROJECT_SOURCE_DIR}/source)
 set(SRC_DOLPHIN
 "
 
-target="../source/$1"
+target="source/$1"
 let count=0
 fileList=""
 for f in "$target"/*
