@@ -1,0 +1,50 @@
+#!/bin/bash
+
+data="
+# version and project naming
+
+cmake_minimum_required (VERSION 2.6)
+project (Dolphin_Matchmaking)
+
+set(CMAKE_CXX_FLAGS '\${CMAKE_CXX_FLAGS} -std=c++14 -stdlib=libc++ -pthread')
+
+# get main project
+set(SRCROOT ${PROJECT_SOURCE_DIR}/source)
+
+set(SRC_DOLPHIN
+"
+
+target="../source/$1"
+let count=0
+fileList=""
+for f in "$target"/*
+do
+	fileName="$(basename $f)"
+	if [[ $fileName == *".cpp" ]] || [[ $fileName == *".h" ]] ; then
+		fileName="$fileName"$'\n'
+    fileList="$fileList	\${SRCROOT}/$fileName"
+    let count=count+1
+  fi
+done
+
+data="$data $fileList"
+
+data="$data
+}
+
+add_executable(Dolphin_Matchmaking ${SRC_DOLPHIN})
+
+
+message('Seting up SFML')
+add_definitions(-DSFML_STATIC)
+# get extra libraries
+set(LIBS_PATH ${PROJECT_SOURCE_DIR}/thirdparty/SFML/build/)
+
+add_subdirectory(thirdparty/SFML)
+
+include_directories (BEFORE thirdparty/SFML/include)
+
+target_link_libraries(Dolphin_Matchmaking sfml-network sfml-system)
+"
+
+echo "$data" > CMakeLists.txt
